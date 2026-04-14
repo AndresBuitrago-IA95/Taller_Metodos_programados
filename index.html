@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Métodos Numéricos</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- MathJax for rendering equations -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <!-- UI Custom Styles -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </div>
+                <h2>Métodos Numéricos</h2>
+            </div>
+            
+            <nav id="nav-lista">
+                <ul>
+                    <li data-target="portada" class="active">Portada y Grupo</li>
+                    <li data-target="ejercicio1">1. Multiplicadores de Lagrange</li>
+                    <li data-target="ejercicio2">2. Búsqueda de Raíces: f(x)=x¹⁰-3x⁴</li>
+                    <li data-target="ejercicio3">3. Optimización: x³·e^(-x²/2)·sin(x)+x²/4</li>
+                    <li data-target="ejercicio4">4. Polinomio: f(x)=-1.5x³-2x³+12x-3</li>
+                    <li data-target="ejercicio5">5. Trigonométrica: f(x)=2sen(x)-x/4</li>
+                    <li data-target="ejercicio6">6. Hiperbólica: f(x)=tanh(x²-7)</li>
+                    <li data-target="ejercicio7">7. Polinomio de Grado 4 (Error Sev.)</li>
+                    <li data-target="ejercicio8">8. Exponencial: f(x)=3e^x-7/3</li>
+                    <li data-target="ejercicio9">9. Maximizando f(x,y) c. Búsqueda Aleat.</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <header class="top-header">
+                <h1 id="content-title">Portada</h1>
+            </header>
+            
+            <div class="scroll-container">
+                <div class="layout-grid">
+                    <section class="text-panel" id="content-text">
+                        <!-- Dynamic Text will be inserted here -->
+                    </section>
+                    
+                    <section class="graph-panel">
+                        <div class="graph-container">
+                            <div id="plot-div">
+                                <!-- Plotly Graph will be rendered here -->
+                                <div class="placeholder-text">Selecciona un ejercicio para ver el análisis y gráfico.</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="datos_ejercicios.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
