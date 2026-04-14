@@ -11,6 +11,9 @@
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 
+    <!-- Math.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.0.0/math.min.js"></script>
+
     <!-- MathJax for rendering equations -->
     <script>
       MathJax = {
@@ -73,6 +76,27 @@
                             <div id="plot-div">
                                 <!-- Plotly Graph will be rendered here -->
                                 <div class="placeholder-text">Selecciona un ejercicio para ver el análisis y gráfico.</div>
+                            </div>
+                        </div>
+
+                        <!-- Panel de Laboratorio Interactivo -->
+                        <div id="interactive-lab" class="interactive-lab hidden">
+                            <h4>⚙️ Laboratorio Interactivo: Personalizar Gráfico</h4>
+                            <div class="lab-controls">
+                                <div class="input-group">
+                                    <label>Función f(x):</label>
+                                    <input type="text" id="custom-fx" placeholder="Ej: 2*sin(x) - x/4" />
+                                </div>
+                                <div class="input-group">
+                                    <label>Puntos X (separados por coma):</label>
+                                    <input type="text" id="custom-pts-x" placeholder="Ej: -1, 0, 1" />
+                                </div>
+                                <div class="input-group">
+                                    <label>Puntos Y (separados por coma):</label>
+                                    <input type="text" id="custom-pts-y" placeholder="Ej: -2, 0, 1" />
+                                </div>
+                                <button id="btn-custom-plot" class="btn-primary">Gráficar Personalizado</button>
+                                <button id="btn-reset-plot" class="btn-secondary">Restaurar Original</button>
                             </div>
                         </div>
                     </section>
